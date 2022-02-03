@@ -31,7 +31,7 @@ def foo():
     mas = list(set2)
     mas2=[]
     for item in mas:
-        if len(item)>20:
+        if len(item)>30:
             mas2.append(item) 
     opti = {}
     title= {}
