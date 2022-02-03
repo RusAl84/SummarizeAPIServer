@@ -28,12 +28,11 @@ def foo():
         if not "nan" in str(item).replace(" nan ", " "):
             set2.add(str(item).replace(" nan ", " "))
     mas = list(set2)
-    print("Исходный текст:")
-    print(text)
-    print("Результат работы Rake:")
-    print(str(mas))
-    print(mas[0])
-    return jsonify(mas), 200, {'Content-Type': 'application/json'}
+    mas2=[]
+    for item in mas:
+        if len(item)>12:
+            mas2.append(item) 
+    return jsonify(mas2), 200, {'Content-Type': 'application/json'}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
